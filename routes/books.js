@@ -1,9 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const booksCtrl = require('../controllers/books');
+const isLoggedIn = require('../config/auth');
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/', booksCtrl.index);
+// Use isLoggedIn middleware to protect routes below
+router.get('/new', isLoggedIn, booksCtrl.new);
+router.get('/:id', isLoggedIn, booksCtrl.show);
+router.post('/', isLoggedIn, booksCtrl.create);
 
 module.exports = router;

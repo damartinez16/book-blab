@@ -21,7 +21,7 @@ const bookSchema = new Schema({
         required: true
     },
     author: String,
-    comments: [commentSchema]
+    comments: [commentSchema],
 }, {
     timestamps: true
 });
