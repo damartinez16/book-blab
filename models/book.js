@@ -1,11 +1,11 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const commentSchema = new Schema({
     content: String,
     rating: {
         type: Number,
-        min: 1,
+        min:1,
         max:5,
         default: 5
     },
@@ -13,15 +13,24 @@ const commentSchema = new Schema({
     userAvatar: String
 }, {
     timestamps: true
-});
-
+})
+ 
 const bookSchema = new Schema({
     title: {
         type: String,
         required: true
     },
     author: String,
+    genre: {
+        type: String,
+        enum: ['Sci-Fi/Fantasy', 'Mystery/Thriller', 'Young-Adult', 
+        'Horror', 'Fiction', 'Non-Fiction', 'Humor/Comedy', 'Graphic Novel']
+    },
     comments: [commentSchema],
+    userRecommending: [{ type: Schema.Types. ObjectId, ref: 'User'}]
 }, {
     timestamps: true
 });
+
+
+module.exports = mongoose.model('Book', bookSchema);

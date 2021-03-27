@@ -7,12 +7,17 @@ var session = require('express-session');
 var passport = require('passport');
 var methodOverride = require('method-override');
 
+// Very important to process the .env before the database connection
 require('dotenv').config();
+
 require('./config/database');
+// Configure PassportJS
 require('./config/passport');
 
 var indexRouter = require('./routes/index');
 var booksRouter = require('./routes/books');
+var commentsRouter = require('./routes/comments');
+
 
 var app = express();
 
@@ -36,6 +41,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// Add this middleware to auto pass the user to all templates
 app.use(function(req, res, next) {
   res.locals.user = req.user;
   next();
@@ -43,6 +49,8 @@ app.use(function(req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/books', booksRouter);
+app.use('/', commentsRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
