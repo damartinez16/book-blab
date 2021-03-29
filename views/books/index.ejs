@@ -5,17 +5,18 @@
       <th>Title</th> 
       <th>Author</th>
       <th>Genre</th>
-    </tr>
+    </tr> <br>
   </thead>
   <tbody>
     <% books.forEach(function(b) { %>
       <tr>
-        <td><%= b.title %></td>
-        <td><%= b.author %></td>
+          <br><br>
+        <td><strong><%= b.title %></strong></td>&nbsp;
+        <td><%= b.author %></td>&nbsp;
         <td><%= b.genre %></td>
         <td><a href="/books/<%= b._id %>">DETAILS</a></td>
       </tr>
-      <% }); %>
+      <% }); %> 
     </tbody>
   </table>
 <%- include('../partials/footer') %>

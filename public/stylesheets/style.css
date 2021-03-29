@@ -13,10 +13,13 @@ body {
 a {
   color: #25336d;
   text-decoration: none;
+  padding: 5px;
 }
 
 nav > a:hover:not(.active) {
   color: white;
+  background-color: #25336d;
+  border-radius: 5px;;
 }
 
 nav > a.active {
@@ -26,13 +29,17 @@ nav > a.active {
 
 nav {
   text-align: right;
-  font-size: 2vh;
+  font-size: 1.5vh;
   margin-bottom: 60px;
 }
 
 nav > .logo-top {
   text-align: left;
   margin-right: 100%;
+}
+
+nav a:first-child:hover {
+background-color: rgb(241, 238, 238);
 }
 
 footer {
@@ -45,7 +52,8 @@ footer {
 }
 
 .welcome {
-  text-align: center;
+  text-align: right;
+  margin-bottom: 0;
 }
 
 .fade-in {
@@ -72,9 +80,19 @@ p {
 }
 
 main {
- text-align: center;
- background-color: white;
- padding: 20px;
- margin: 0 30%;
+  background-color: white;
+  padding: 20px;
+  margin: 0 30%;
+  border: solid #25336d 5px;
+  border-radius: 25px;
+  text-align: center;
+}
 
+h1 {
+  font-size: 35px;
+  color: #25336d;
+  
+}
+table #list {
+font-size: 50px;
 }
