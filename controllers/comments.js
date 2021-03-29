@@ -3,8 +3,15 @@ const Book = require('../models/book');
 module.exports = {
     create,
     delete: deleteComment,
-    update
+    update,
+    edit
 };
+
+function edit(req, res) {
+    Book.findOne({'comments._id': req.params.id}, function(err, book) {
+      res.render('books/edit',  { title: 'Edit Review', book});
+    });
+  }
 
 function update(req, res) {
     Book.findOne({'comments._id': req.params.id}, function(err, book) {
