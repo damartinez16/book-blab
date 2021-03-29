@@ -52,6 +52,10 @@
               <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
                 <button type="submit">X</button>
               </form>
+              <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
+                <input name="content" value="<%= c.content %>">
+                <button type="submit">UPDATE COMMENT</button>
+              </form>
             <% } %>
           </td>
         </tr>

@@ -8,9 +8,9 @@ module.exports = {
 
 function update(req, res) {
     Book.findOne({'comments._id': req.params.id}, function(err, book) {
-      const commentSubdoc = book.comments.id(req.params.id);
-      if (!commentSubdoc.userId.equals(req.user._id)) return res.redirect(`/books/${book._id}`);
-      commentSubdoc.text = req.body.text;
+      const comment = book.comments.id(req.params.id);
+      if (!comment.user._id.equals(req.user._id)) return res.redirect(`/books/${book._id}`);
+      Object.assign(comment, req.body);
       book.save(function(err) {
         res.redirect(`/books/${book._id}`);
       });
