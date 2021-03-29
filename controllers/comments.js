@@ -2,8 +2,20 @@ const Book = require('../models/book');
 
 module.exports = {
     create,
-    delete: deleteComment
+    delete: deleteComment,
+    update
 };
+
+function update(req, res) {
+    Book.findOne({'comments._id': req.params.id}, function(err, book) {
+      const commentSubdoc = book.comments.id(req.params.id);
+      if (!commentSubdoc.userId.equals(req.user._id)) return res.redirect(`/books/${book._id}`);
+      commentSubdoc.text = req.body.text;
+      book.save(function(err) {
+        res.redirect(`/books/${book._id}`);
+      });
+    });
+  }
 
 function deleteComment(req, res, next) {
     Book.findOne({'comments._id': req.params.id}).then(function(book) {
