@@ -8,7 +8,7 @@ module.exports = {
 function deleteComment(req, res, next) {
     Book.findOne({'comments._id': req.params.id}).then(function(book) {
         const comment = book.comments.id(req.params.id);
-        if (!comments.user.equals(req.user._id)) return res.redirect('/books');
+        if (!comment.user.equals(req.user._id)) return res.redirect(`/books/${books._id}`);
         comment.remove();
         book.save().then(function() {
             res.redirect(`/books/${book._id}`);

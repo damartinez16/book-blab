@@ -15,6 +15,9 @@
         <td><%= b.author %></td>&nbsp;
         <td><%= b.genre %></td>
         <td><a href="/books/<%= b._id %>">DETAILS</a></td>
+        <% if (user && user._id.equals(b.user)) { %>
+        <td><a href="/books/<%= b._id %>/edit">EDIT</a></td>
+        <% } %>
       </tr>
       <% }); %> 
     </tbody>

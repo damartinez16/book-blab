@@ -5,9 +5,8 @@ module.exports = {
     index,
     show,
     create,
-    new: newBook
+    new: newBook,
 }
-
 
 function index(req, res) {
     Book.find({}, function(err, books) {
