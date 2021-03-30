@@ -8,6 +8,8 @@ body {
   height: 100vh;
   margin: 0;
   background-color: rgb(241, 238, 238);
+  background: url("https://i.imgur.com/qDcplSt.png") bottom center no-repeat;
+  background-size: 250vmin 100vmin;
 }
 
 a {
@@ -19,7 +21,7 @@ a {
 nav > a:hover:not(.active) {
   color: white;
   background-color: #25336d;
-  border-radius: 5px;;
+  border-radius: 5px;
 }
 
 nav > a.active {
@@ -39,11 +41,10 @@ nav > .logo-top {
 }
 
 nav a:first-child:hover {
-background-color: rgb(241, 238, 238);
+  background-color: transparent;
 }
 
 footer {
-  margin: 0 auto;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -63,6 +64,7 @@ footer {
   animation-iteration-count: 20s;
   animation-fill-mode: forwards;
   text-align: center;
+  margin-top: 150px;
 }
 
 @keyframes fadeInAnimation {
@@ -75,8 +77,14 @@ footer {
 }
 
 p {
+  margin: 0 auto;
   text-align: center;
-  font-size: larger;
+  font-size: 25px;
+  background-color: #25336d;
+  padding: 15px;
+  border-radius: 1vmin;
+  width: 22em;
+  color: white;
 }
 
 main {
@@ -91,8 +99,7 @@ main {
 h1 {
   font-size: 35px;
   color: #25336d;
-  
 }
 table #list {
-font-size: 50px;
+  font-size: 50px;
 }
