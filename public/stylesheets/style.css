@@ -3,13 +3,12 @@
 }
 
 body {
-  padding: 2.5%;
   font: 14px "Arial", sans-serif;
   height: 100vh;
-  margin: 0;
+  margin: 0 auto;
   background-color: rgb(241, 238, 238);
-  background: url("https://i.imgur.com/02zcVqO.png") bottom center no-repeat;
-  background-size: 250vmin 100vmin;
+  background: url("https://i.imgur.com/02zcVqO.png") rgb(241, 238, 238) bottom center repeat;
+  background-size: 250vmin 150vmin;
 }
 
 a {
@@ -29,21 +28,27 @@ nav > a.active {
   cursor: default;
 }
 
-nav {
-  text-align: right;
-  font-size: 1.7vh;
-  margin-bottom: 60px;
-  font-weight: bold;
- 
+header {
+  margin: 3em 3em;
 }
 
-nav > .logo-top {
-  text-align: left;
-  margin-right: 100%;
+nav {
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  font-size: 2vh;
+  margin-bottom: 60px;
+  font-weight: bold;
 }
 
 nav a:first-child:hover {
   background-color: transparent;
+}
+nav a:first-child {
+  object-fit: contain;
+  margin-right: auto;
 }
 
 footer {
@@ -85,7 +90,7 @@ p {
   background-color: #25336d;
   padding: 15px;
   border-radius: 1vmin;
-  width: 23em;
+  width: 18.5em;
   color: white;
 }
 
@@ -102,12 +107,18 @@ main {
   padding: 40px 20px 60px 20px;
 }
 main > div {
- display: grid;
- grid-template-columns: 3fr 1fr;
- grid-template-rows: 1fr;
- gap: 20px;
- text-align: left;
- padding-left: 100px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 20px;
+  text-align: left;
+  padding-left: 100px;
+}
+#show-page {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
 }
 
 h1 {
@@ -129,10 +140,10 @@ input {
   font-size: medium;
   background-color: #25336d;
   color: white;
-  border-radius: .7vmin;
+  border-radius: 0.7vmin;
 }
 select {
-  border-radius: .7vmin;
+  border-radius: 0.7vmin;
   padding: 10px;
   font-size: medium;
   color: #25336d;
