@@ -141,6 +141,15 @@ h1 {
   gap: 20px;
   margin: 0 auto;
 }
+#show-page {
+  text-align: center;
+  display: inline;
+}
+.block {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
 input {
   height: 40px;
   font-size: medium;
