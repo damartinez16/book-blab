@@ -71,7 +71,7 @@ footer {
   animation-iteration-count: 20s;
   animation-fill-mode: forwards;
   text-align: center;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 
 @keyframes fadeInAnimation {
@@ -99,7 +99,7 @@ main {
   border-radius: 25px;
   padding: 40px 20px 60px 70px;
   background-color: white;
-  margin: 0 25%;
+  margin: 0 30%;
   border: solid #25336d 5px;
   border-radius: 25px;
   text-align: center;
@@ -112,13 +112,19 @@ main > div {
   grid-template-rows: 1fr;
   gap: 20px;
   text-align: left;
-  padding-left: 100px;
+  padding: 0 0 0 50px;
 }
-#show-page {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
+
+td img {
+  border-radius: 15%;
+  width: 4em;
+}
+.username {
+float: right;
+margin-top: 1em;
+margin-left: .5em;
+margin-top: 1.5em;
+margin-right: 2em;
 }
 
 h1 {
@@ -128,12 +134,12 @@ h1 {
 }
 #new-form {
   font-size: larger;
-  text-align: left;
+  text-align: center;
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   gap: 20px;
-  padding: 0 180px;
+  margin: 0 auto;
 }
 input {
   height: 40px;
@@ -147,4 +153,19 @@ select {
   padding: 10px;
   font-size: medium;
   color: #25336d;
+}
+
+@media only screen and (max-width: 640px) {
+  main {
+    margin: 0 auto;
+  }
+  .fade-in img {
+   height: 20vh;
+   margin: 0 20%;
+  }
+  p {
+    text-align: center;
+    font-size: 4vmin;
+    margin-right: 2vmin;
+  }
 }

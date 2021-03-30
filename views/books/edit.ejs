@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
     <% book.comments.forEach(function(c) { %>
 <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
-    <input name="content" value="<%= c.content %>">
+    <input name="content" value="<%= %>">
     <button type="submit">UPDATE COMMENT</button>
   </form>
   <% }) %>
