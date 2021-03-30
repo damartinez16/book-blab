@@ -1,17 +1,19 @@
 <%- include('../partials/header') %>
+<br>
+
 <table id="list"></table>
   <thead>
     <tr>
-      <th>Title</th> 
-      <th>Author</th>
-      <th>Genre</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Genre</th>
     </tr> <br>
   </thead>
   <tbody>
+    <div>
     <% books.forEach(function(b) { %>
       <tr>
-          <br><br>
-        <td><strong><%= b.title %></strong></td>&nbsp;
+        <td><%= b.title %></td>&nbsp;
         <td><%= b.author %></td>&nbsp;
         <td><%= b.genre %></td>
         <td><a href="/books/<%= b._id %>">DETAILS</a></td>
@@ -19,4 +21,5 @@
       <% }); %> 
     </tbody>
   </table>
+</div>
 <%- include('../partials/footer') %>
