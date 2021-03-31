@@ -6,15 +6,16 @@ body {
   width: 95%;
   font: 14px "Arial", sans-serif;
   background-color: rgb(241, 238, 238);
-  background: url("https://i.imgur.com/02zcVqO.png") rgb(241, 238, 238) bottom center repeat;
+  background: url("https://i.imgur.com/02zcVqO.png") rgb(241, 238, 238) bottom
+    center repeat;
   background-size: 250vmin 150vmin;
   margin: 0 auto;
   height: 100vh;
   display: grid;
   grid-template-rows: 50px 1fr;
-  grid-template-areas: 
+  grid-template-areas:
     "nav"
-    "main"
+    "main";
 }
 
 a {
@@ -37,7 +38,7 @@ nav > a.active {
 nav {
   grid-area: nav;
   font-size: 1.3em;
-  margin-bottom: 60px;
+  margin: 30px 0 60px 0;
   font-weight: bold;
   display: flex;
   justify-content: flex-end;
@@ -70,6 +71,7 @@ footer {
   animation-iteration-count: 20s;
   animation-fill-mode: forwards;
   text-align: center;
+  margin-bottom: 20%;
 }
 
 @keyframes fadeInAnimation {
@@ -81,17 +83,6 @@ footer {
   }
 }
 
-p {
-  margin: 0 auto;
-  text-align: center;
-  font-size: 25px;
-  background-color: #25336d;
-  padding: 15px;
-  border-radius: 1vmin;
-  width: 18.5em;
-  color: white;
-}
-
 main {
   grid-area: main;
   display: flex;
@@ -100,7 +91,7 @@ main {
   border: solid #25336d 5px;
   border-radius: 25px;
   padding: 70px;
-  background-color:  rgb(241, 238, 238);
+  background-color: rgb(241, 238, 238);
   border: dashed #25336d 5px;
   border-radius: 25px;
   font-size: large;
@@ -114,11 +105,11 @@ td img {
   width: 4em;
 }
 .username {
-float: right;
-margin-top: 1em;
-margin-left: .5em;
-margin-top: 1.5em;
-margin-right: 2em;
+  float: right;
+  margin-top: 1em;
+  margin-left: 0.5em;
+  margin-top: 1.5em;
+  margin-right: 2em;
 }
 
 h1 {
@@ -127,7 +118,6 @@ h1 {
   text-align: center;
 }
 #new-form {
-  
   font-size: 1em;
   text-align: left;
   display: grid;
@@ -143,6 +133,19 @@ h1 {
   text-align: center;
   display: inline;
 }
+/* .bookslist {
+  display: inline;
+} */
+
+#all-books-container {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-template-rows: 1fr;
+ column-gap: .5em;
+ margin: 0 auto;
+ 
+}
+
 .block {
   display: grid;
   grid-template-columns: 1fr;
@@ -153,7 +156,6 @@ input {
   background-color: #25336d;
   color: white;
   border-radius: 0.7vmin;
-
 }
 select {
   border-radius: 0.7vmin;

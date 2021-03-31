@@ -10,14 +10,15 @@
     </tr> <br>
   </thead>
   <tbody>
-    <div>
+    <div id="all-books-container">
     <% books.forEach(function(b) { %>
       <tr>
-        <td><%= b.title %></td>&nbsp;
-        <td><%= b.author %></td>&nbsp;
-        <td><%= b.genre %></td>
-        <td><a href="/books/<%= b._id %>">DETAILS</a></td>
+        <td class="bookt"><strong><%= b.title %></strong></td>&nbsp;
+        <td class="booka"><%= b.author %></td>&nbsp;
+        <td class="bookg"><%= b.genre %></td>
+        <td class="bookd"><a href="/books/<%= b._id %>">DETAILS</a></td>
       </tr>
+      <br><br>
       <% }); %> 
     </tbody>
   </table>
