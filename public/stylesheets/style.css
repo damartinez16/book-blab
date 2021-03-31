@@ -3,12 +3,18 @@
 }
 
 body {
+  width: 95%;
   font: 14px "Arial", sans-serif;
-  height: 100vh;
-  margin: 0 auto;
   background-color: rgb(241, 238, 238);
   background: url("https://i.imgur.com/02zcVqO.png") rgb(241, 238, 238) bottom center repeat;
   background-size: 250vmin 150vmin;
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas: 
+    "nav"
+    "main"
 }
 
 a {
@@ -28,19 +34,14 @@ nav > a.active {
   cursor: default;
 }
 
-header {
-  margin: 3em 3em;
-}
-
 nav {
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  text-align: right;
+  grid-area: nav;
   font-size: 1.3em;
   margin-bottom: 60px;
   font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 nav a:first-child:hover {
@@ -54,9 +55,7 @@ nav a:first-child {
 footer {
   position: fixed;
   bottom: 0;
-  width: 100%;
-  height: 60px;
-  text-align: center;
+  margin: 0 45.7%;
 }
 
 .welcome {
@@ -71,7 +70,6 @@ footer {
   animation-iteration-count: 20s;
   animation-fill-mode: forwards;
   text-align: center;
-  margin-top: 100px;
 }
 
 @keyframes fadeInAnimation {
@@ -95,17 +93,20 @@ p {
 }
 
 main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: solid #25336d 5px;
   border-radius: 25px;
-  padding: 40px 20px 60px 70px;
-  background-color: white;
-  margin: 0 30%;
-  border: solid #25336d 5px;
+  padding: 70px;
+  background-color:  rgb(241, 238, 238);
+  border: dashed #25336d 5px;
   border-radius: 25px;
   font-size: large;
-  padding: 40px 60px 40px 60px;
-  min-width: 300px;
-  max-width: 600px;
+  margin: 8% 30% 30% 30%;
+  text-align: center;
+  max-width: 100%;
 }
 
 td img {
@@ -126,14 +127,17 @@ h1 {
   text-align: center;
 }
 #new-form {
-  padding: 2em;
+  
   font-size: 1em;
   text-align: left;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 20px;
-  margin: 0 auto;
+  column-gap: 1em;
+  row-gap: 2em;
+  margin: 0 20%;
+  max-width: 600px;
+  position: relative;
 }
 #show-page {
   text-align: center;
@@ -146,10 +150,10 @@ h1 {
 }
 input {
   height: 40px;
-  font-size: medium;
   background-color: #25336d;
   color: white;
   border-radius: 0.7vmin;
+
 }
 select {
   border-radius: 0.7vmin;
@@ -157,19 +161,16 @@ select {
   font-size: medium;
   color: #25336d;
 }
+.book-button {
+  grid-column-start: 2;
+  margin-left: 20vmin;
+}
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   main {
-    min-width: 400px;
-    margin: 0 auto;
+    margin: 10% auto;
   }
-  .fade-in img {
-   height: 20vh;
-   margin: 0 20%;
-  }
-  p {
-    text-align: center;
-    font-size: 4vmin;
-    margin-right: 2vmin;
+  nav {
+    font-size: small;
   }
 }
