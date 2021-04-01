@@ -11,7 +11,7 @@
     <div class="review-field">
       <div class="review-box">
         <form id="add-review-form" method="POST" action="/books/<%= book._id %>/comments">
-          <label class="review-title">Review:</label></div>
+          <label>Review:</label></div>
           <textarea name="content"></textarea>
       <label>Rating:</label>
         <select name="rating">
@@ -21,7 +21,7 @@
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-     <input class="review-button" type="submit" value="Add Review">
+     <input id="review-button" type="submit" value="Add Review">
         </form>
         <% } %>
     </div>
