@@ -133,17 +133,39 @@ h1 {
   text-align: center;
   display: inline;
 }
-/* .bookslist {
-  display: inline;
-} */
 
-#all-books-container {
+.all-books-container, .list-title-container {
  display: grid;
- grid-template-columns: 1fr 1fr 1fr 1fr;
- grid-template-rows: 1fr;
- column-gap: .5em;
- margin: 0 auto;
- 
+ grid-template-columns: 2.5fr 2fr 2fr 1fr;
+text-align: left;
+padding-left: 30px;
+column-gap: 2em;
+row-gap: 2em;
+}
+#title-label, #author-label, #genre-label {
+  color:white;
+  background-color: #25336d;
+  text-align: center;
+  border-radius: .3em;
+  padding: 5px 0;
+
+}
+
+.bookt {
+  grid-column-start: 1;
+  color: #25336d;
+  font-style: oblique;
+  font-size: 1.1em;
+  
+}
+.booka {
+  grid-column-start: 2;
+}
+.bookg {
+  grid-column-start: 3;
+}
+.bookd {
+  grid-column-start: 4;
 }
 
 .block {
@@ -170,7 +192,7 @@ select {
 
 @media only screen and (max-width: 1200px) {
   main {
-    margin: 10% auto;
+    margin: 30% auto;
   }
   nav {
     font-size: small;
