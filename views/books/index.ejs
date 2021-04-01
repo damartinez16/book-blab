@@ -1,21 +1,20 @@
 <%- include('../partials/header') %>
   <br>
   <div class="all-books-container">
-    <div id="title-label"><strong>Title</strong></div>
+    <div id="title-label">Title</div>
     <div class="booka" id="author-label"><strong>Author</strong></div>
     <div class="bookg" id="genre-label"><strong>Genre</strong></div>
     <div class="bookd"></div>
     <% books.forEach(function(b) { %>
-      <div class="bookt"><strong>
-          <%= b.title %>
-        </strong></div>
+      <div class="bookt"><a href="/books/<%= b._id %>">
+          <%= b.title %></a>
+       </div>
       <div class="booka">
         <%= b.author %>
       </div>
       <div class="bookg">
         <%= b.genre %>
       </div>
-      <a class="bookd" href="/books/<%= b._id %>">DETAILS</a>
       <% }); %>
 
   </div>

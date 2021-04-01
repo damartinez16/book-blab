@@ -15,9 +15,7 @@
 </head>
 <body>
   <header>
-  <% if (user) { %>
-  <h3 class="welcome">Welcome <%= user.name  %>!</h3>
-  <% } %>
+
   <nav>
     <a class="logo-top" href="/"><img src="https://i.imgur.com/ABaLuTR.png" height="50px"></a>
     <a href="/books"  title === 'All Books' ? 'class="active"' : '' >ALL BOOKS</a>
@@ -28,6 +26,9 @@
       <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/hcgBYMZ.png" height="16px"></a>
     <% } %>
   </nav>
+  <% if (user) { %>
+    <h3 class="welcome">Welcome <%= user.name  %>!</h3>
+    <% } %>
 </header>
   <br><br>
   <div class="fade-in"><img src="https://i.imgur.com/vAgn3EG.png" height="250px" alt="logo Book Blab"></div>
