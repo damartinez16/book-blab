@@ -141,6 +141,7 @@ text-align: left;
 padding-left: 30px;
 column-gap: 2em;
 row-gap: 2em;
+max-width: 600px;
 }
 #title-label, #author-label, #genre-label {
   color:white;
@@ -192,9 +193,13 @@ select {
 
 @media only screen and (max-width: 1200px) {
   main {
-    margin: 30% auto;
+    margin: 15% auto;
+    position: relative;
   }
   nav {
     font-size: small;
+  }
+  .fade-in {
+    position: relative;
   }
 }
