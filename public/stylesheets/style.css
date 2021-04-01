@@ -56,7 +56,9 @@ nav a:first-child {
 footer {
   position: fixed;
   bottom: 0;
-  margin: 0 45.7%;
+  left: 0;
+  text-align: center;
+  width: 100%;
 }
 
 .welcome {
@@ -95,11 +97,11 @@ main {
   border: dashed #25336d 5px;
   border-radius: 25px;
   font-size: large;
-  margin: 8% auto;
-  margin-top: 15%;
+  margin: 7% auto 50% auto;
   text-align: center;
   max-width: 100%;
   min-width: 50%;
+  position: relative;
 }
 
 td img {
@@ -134,15 +136,18 @@ h1 {
 
 .show-page {
   display: grid;
-  grid-template-columns: 1fr;
-  text-align: justify;
+  grid-template-columns: 90px 1fr;
+  grid-template-rows: 1fr 1fr;
+  text-align: start;
   font-size: larger;
-  color: white;
+  color: #25336d;
   row-gap: 20px;
+  column-gap: 10px;
   font-weight: bolder;
-  background-color: #25336d;
+  background-color: transparent;
+  border: dashed #25336d 3px;
   border-radius: 1em;
-  padding: 30px;
+  padding: 30px 50px;
 }
 
 .review-field {
@@ -236,7 +241,7 @@ select {
 
 @media only screen and (max-width: 1500px) {
   main {
-    margin: 20% auto;
+    margin: 10% auto;
     position: relative;
   }
   nav {
@@ -252,5 +257,8 @@ select {
     position: relative;
     font-size: small;
     column-gap: 1em;
+  }
+  #googleid {
+    height: 11px;
   }
 }
