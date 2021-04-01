@@ -143,7 +143,6 @@ h1 {
   background-color: #25336d;
   border-radius: 1em;
   padding: 30px;
-
 }
 
 .review-field {
@@ -156,7 +155,7 @@ h1 {
 }
 label {
   padding-top: 20px;
-  color:#25336d;
+  color: #25336d;
   font-size: 1.2em;
 }
 select {
@@ -168,12 +167,12 @@ select {
 textarea {
   width: 90%;
   height: 5em;
-  border-radius: .7em;
+  border-radius: 0.7em;
   grid-column-start: 2;
 }
 .review-box {
   grid-row-start: 1;
-  color:#25336d;
+  color: #25336d;
   padding-bottom: 5px;
   padding-top: 20px;
 }
@@ -248,5 +247,10 @@ select {
   }
   nav img:first-child {
     height: 35px;
+  }
+  .all-books-container {
+    position: relative;
+    font-size: small;
+    column-gap: 1em;
   }
 }
