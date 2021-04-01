@@ -22,19 +22,20 @@ a {
   color: #25336d;
   text-decoration: none;
   padding: 7px;
+  font-weight: 900;
 }
 nav > a {
-  color:rgb(241, 238, 238);
+  color: rgb(241, 238, 238);
 }
 nav > a:hover:not(.active) {
   background-color: rgb(241, 238, 238);
   color: #25336d;
-  border-radius: .5em;
+  border-radius: 0.5em;
   padding: 7px 7px;
 }
 
 nav > a.active {
-  color:#25336d;
+  color: #25336d;
   cursor: default;
 }
 
@@ -45,7 +46,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  background-color: rgba(37,51,109,0.7);
+  background-color: rgba(37, 51, 109, 0.7);
   padding: 10px 20px;
 }
 
@@ -70,16 +71,19 @@ footer {
   margin: 15px 30px 100px 0;
   font-size: 18px;
   font-weight: 900;
-  color:rgb(37,51,109);
+  color: rgb(37, 51, 109);
 }
 
 .fade-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: 60px;
   text-transform: none;
   animation: fadeInAnimation ease 3s;
   animation-iteration-count: 20s;
   animation-fill-mode: forwards;
-  text-align: center;
+  padding-left: 30px;
   margin-bottom: 20%;
 }
 
@@ -99,7 +103,7 @@ main {
   align-items: center;
   border: solid #25336d 5px;
   border-radius: 25px;
-  padding: 70px;
+  padding: 50px 70px 70px 70px;
   background-color: rgb(241, 238, 238);
   border: dashed #25336d 5px;
   border-radius: 25px;
@@ -200,13 +204,12 @@ textarea {
   text-align: start;
 }
 
-
 .all-books-container,
 .list-title-container {
   display: grid;
   grid-template-columns: 2.5fr 2fr 2fr;
   text-align: left;
-  padding-left: 30px;
+  padding-left: 2em;
   column-gap: 2em;
   row-gap: 2em;
   max-width: 800px;
@@ -277,5 +280,8 @@ select {
   }
   #googleid {
     height: 11px;
+  }
+  div > img {
+    height: 190px;
   }
 }
