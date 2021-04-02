@@ -6,7 +6,7 @@ Add your favorite books, review other books, and comment how much you loved them
 ![Book-Blab-Home](https://i.imgur.com/1lBklxB.png)
 ![Book-Blab-All](https://i.imgur.com/YkAJ6Sm.png)
 ![Book-Blab-Add](https://i.imgur.com/3cvbKqC.png)
-![Book-Blab-Reviews](https://i.imgur.com/N5l3yPY.png)
+![Book-Blab-Reviews](https://i.imgur.com/k0JCt2V.png)
 
 ## TECHNOLOGIES USED: 
 - HTML, CSS, and JavaScript
