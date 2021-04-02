@@ -85,7 +85,7 @@ footer {
   animation-iteration-count: 20s;
   animation-fill-mode: forwards;
   padding-left: 30px;
-  margin-bottom: 20%;
+  margin-bottom: 40%;
 }
 
 @keyframes fadeInAnimation {
