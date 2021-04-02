@@ -42,7 +42,7 @@ function create(req, res) {
         req.body.user = req.user._id;
         req.body.userName = req.user.name;
         req.body.userAvatar = req.user.avatar;
-        book.comments.push(req.body);
+        book.comments.unshift(req.body);
         book.save(function(err) {
             res.redirect(`/books/${book._id}`);
         });

@@ -256,18 +256,25 @@ select {
 
 .review-display {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: 300px 1fr 200px .5fr .5fr .5fr;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 10px;
   column-gap: 20px;
   text-align: center;
-  border:rgb(37, 51, 109) dashed .3em;
-  border-radius: 2em;
-  padding: 20px 50px 30px 40px;
   font-size: .9em;
-  margin: 0 10%;
   color:rgb(37, 51, 109);
   font-weight:600;
+  border-top:rgb(37, 51, 109) dashed .3em;
+  margin-top: 20px;
+  padding-top: 20px;
+  
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-weight: 900;
 }
 
 .review-display > div {
@@ -276,6 +283,10 @@ select {
   justify-content: center;
 }
 
+.review-content {
+  overflow: auto;
+  text-align: left;
+}
 
 .review-user > img {
   border-radius: 20%;
@@ -287,9 +298,21 @@ select {
 
 .average {
   grid-column-start: 4;
-  grid-row-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 3;
   font-weight: 900;
-  color: #25336d;
+  background-color: rgb(37, 51, 109);
+  color: rgb(241, 238, 238);
+  margin-left: 65%;
+  font-size: 1em;
+  padding: 5px;
+  border-radius: .5em;
+}
+#update {
+  color:rgb(241, 238, 238);
+  background-color: rgb(37, 51, 109);
+  padding: 0 15px;
 }
 
 @media only screen and (max-width: 1200px) {

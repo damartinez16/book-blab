@@ -44,7 +44,7 @@
                   <div>
                     <%= c.createdAt.toLocaleDateString() %>
                   </div>
-                  <div>
+                  <div class="review-content">
                     <%= c.content %>
                   </div>
                   <div>
@@ -59,11 +59,13 @@
                   <div><a href="/comments/<%=c._id%>/edit">Edit</a></div>
                   <% } %>
                 <% }); %>
+              </div>
+            </div>
                     <div class="average">
                         <%= (total / book.comments.length).toFixed(1) %>
-                    </div>
+                      </div>
       <% } else { %>
         <h5>No Reviews Yet</h5>
         <% } %>
-      </div>
+      
           <%- include('../partials/footer') %>

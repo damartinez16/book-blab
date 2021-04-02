@@ -1,8 +1,10 @@
 <%- include('../partials/header') %>
-    <% book.comments.forEach(function(c) { %>
+<% book.comments.forEach(function(c) { %>
+        <div class="review">
 <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
     <input name="content" value="<%= %>">
-    <button type="submit">UPDATE COMMENT</button>
+    <button id="update" type="submit">UPDATE COMMENT</button>
   </form>
-  <% }) %>
+  <% }); %>
+</div>
   <%- include('../partials/footer') %>
