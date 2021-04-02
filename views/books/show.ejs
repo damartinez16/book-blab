@@ -21,19 +21,19 @@
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-     <input id="review-button" type="submit" value="Add Review">
+     <input required id="review-button" type="submit" value="Add Review">
         </form>
         <% } %>
     </div>
 
     <% if (book.comments.length) { %>
         <div class="review-display">
-            <div>User</div>
-            <div>Date</div>
-            <div>Review</div>
-            <div>Rating</div>
+            <div><strong>User</strong></div>
+            <div><strong>Date</strong></div>
+            <div><strong>Review</strong></div>
+            <div><strong>Rating</strong></div>
             <div></div>
-          
+         
         <br>
           <% let total=0 %>
             <% book.comments.forEach(function(c) { %>
