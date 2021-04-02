@@ -49,7 +49,6 @@ nav {
   background-color: rgba(37, 51, 109, 0.7);
   padding: 10px 20px;
 }
-
 nav a:first-child:hover {
   background-color: transparent;
 }
@@ -57,7 +56,9 @@ nav a:first-child {
   object-fit: contain;
   margin-right: auto;
 }
-
+.login img {
+  height: 15px;
+}
 footer {
   position: fixed;
   bottom: 0;
@@ -115,18 +116,6 @@ main {
   position: relative;
 }
 
-td img {
-  border-radius: 15%;
-  width: 4em;
-}
-.username {
-  float: right;
-  margin-top: 1em;
-  margin-left: 0.5em;
-  margin-top: 1.5em;
-  margin-right: 2em;
-}
-
 h1 {
   font-size: 35px;
   color: #25336d;
@@ -166,11 +155,13 @@ h2 {
 
 .review-field {
   display: grid;
-  grid-template-columns: 100px 450px;
+  grid-template-columns: 15vmin 40vmin;
   grid-template-rows: 1fr 1fr 1fr;
   row-gap: 20px;
+  column-gap: 20px;
   text-align: center;
-  width: 100%;
+  width: 80%;
+  margin-left: 20%;
 }
 #review-button {
   grid-column-start: 2;
@@ -178,7 +169,7 @@ h2 {
   margin-left: 70%;
 }
 label {
-  padding-top: 20px;
+  padding-top: 7px;
   color: #25336d;
   font-size: 1.2em;
   font-weight: 700;
@@ -202,6 +193,9 @@ textarea {
   padding-bottom: 5px;
   padding-top: 20px;
   text-align: start;
+}
+.rating-label {
+  padding-top: 20px;
 }
 
 .all-books-container,
@@ -241,7 +235,8 @@ textarea {
   grid-column-start: 4;
 }
 
-input {
+input,
+button {
   height: 40px;
   background-color: #25336d;
   color: rgb(241, 238, 238);
@@ -257,6 +252,36 @@ select {
 .book-button {
   grid-column-start: 2;
   margin-left: 20vmin;
+}
+
+.review-display {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  row-gap: 40px;
+  column-gap: 20px;
+}
+
+.review-display > div {
+  padding-top: 30px;
+}
+.review-user {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.review-user > img {
+  border-radius: 20%;
+  border: dashed #25336d;
+  height: 70px;
+  display: flex;
+}
+
+.average {
+  grid-column-start: 6;
+  font-weight: 900;
+  color: #25336d;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -278,10 +303,10 @@ select {
     font-size: small;
     column-gap: 1em;
   }
-  #googleid {
-    height: 11px;
-  }
   div > img {
     height: 190px;
+  }
+  .login img {
+    max-height: 10px;
   }
 }
