@@ -1,9 +1,18 @@
 <%- include('../partials/header') %>
   <div class="show-page">
-    <div>Title:</div><div><%= book.title %></div>
-    <div>Author:</div><div><%= book.author %></div>
-    <div>Rating:</div><div><%= book.genre %></div>
+    <div>Title:</div>
+    <div>
+      <%= book.title %>
     </div>
+    <div>Author:</div>
+    <div>
+      <%= book.author %>
+    </div>
+    <div>Rating:</div>
+    <div>
+      <%= book.genre %>
+    </div>
+  </div>
   <br><br>
   <h2>Reviews</h2>
 
@@ -11,61 +20,62 @@
     <div class="review-field">
       <div class="review-box">
         <form id="add-review-form" method="POST" action="/books/<%= book._id %>/comments">
-          <label>Review:</label></div>
-          <textarea name="content"></textarea>
+          <label>Review:</label>
+      </div>
+      <textarea name="content"></textarea>
       <label class="rating-label">Rating:</label>
-        <select name="rating">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-     <input required id="review-button" type="submit" value="Add Review">
-        </form>
-        <% } %>
+      <select name="rating">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <input required id="review-button" type="submit" value="Add Review">
+      </form>
+      <% } %>
     </div>
 
     <% if (book.comments.length) { %>
-        <div class="review-display">
-            <div><strong>User</strong></div>
-            <div><strong>Date</strong></div>
-            <div><strong>Review</strong></div>
-            <div><strong>Rating</strong></div>
-            <div></div>
-         
+      <div class="review-display">
+        <div><strong>User</strong></div>
+        <div><strong>Date</strong></div>
+        <div><strong>Review</strong></div>
+        <div><strong>Rating</strong></div>
+        <div></div>
+
         <br>
-          <% let total=0 %>
-            <% book.comments.forEach(function(c) { %>
-              <% total +=c.rating %>
-                  <div class="review-user"><img src="<%= c.userAvatar %>">
-                      <%= c.userName %>
-                    </div>
-                  <div>
-                    <%= c.createdAt.toLocaleDateString() %>
-                  </div>
-                  <div class="review-content">
-                    <%= c.content %>
-                  </div>
-                  <div>
-                    <%= c.rating %>
-                  </div>
-                  <div>
-                    <% if (user && user._id.equals(c.user)) { %>
-                      <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
-                        <button type="submit">X</button>
-                      </form> 
-                  </div>
-                  <div><a href="/comments/<%=c._id%>/edit">Edit</a></div>
-                  <% } %>
-                <% }); %>
+        <% let total=0 %>
+          <% book.comments.forEach(function(c) { %>
+            <% total +=c.rating %>
+              <div class="review-user"><img src="<%= c.userAvatar %>">
+                <%= c.userName %>
               </div>
-            </div>
-                    <div class="average">
-                        <%= (total / book.comments.length).toFixed(1) %>
-                      </div>
+              <div>
+                <%= c.createdAt.toLocaleDateString() %>
+              </div>
+              <div class="review-content">
+                <%= c.content %>
+              </div>
+              <div>
+                <%= c.rating %>
+              </div>
+              <div>
+                <% if (user && user._id.equals(c.user)) { %>
+                  <form action="/comments/<%= c._id %>?_method=DELETE" method="POST">
+                    <button type="submit">X</button>
+                  </form>
+              </div>
+              <div><a href="/comments/<%=c._id%>/edit">Edit</a></div>
+              <% } %>
+                <% }); %>
+      </div>
+      </div>
+      <div class="average">
+        <%= (total / book.comments.length).toFixed(1) %>
+      </div>
       <% } else { %>
         <h5>No Reviews Yet</h5>
         <% } %>
-      
+
           <%- include('../partials/footer') %>

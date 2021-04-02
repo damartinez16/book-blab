@@ -11,9 +11,9 @@ passport.use(
       callbackURL: process.env.GOOGLE_CALLBACK
     },
     // the verify callback function
-    function(accessToken, refreshToken, profile, cb) {
+    function (accessToken, refreshToken, profile, cb) {
       // a user has logged in with OAuth
-      User.findOne({googleId: profile.id}).then(async function(user) {
+      User.findOne({ googleId: profile.id }).then(async function (user) {
         if (user) return cb(null, user);
         // we have a shiney new user
         try {
@@ -32,12 +32,12 @@ passport.use(
   )
 );
 
-passport.serializeUser(function(user, cb) {
+passport.serializeUser(function (user, cb) {
   cb(null, user._id);
 });
 
-passport.deserializeUser(function(userId, cb) {
-  User.findById(userId).then(function(user) {
+passport.deserializeUser(function (userId, cb) {
+  User.findById(userId).then(function (user) {
     cb(null, user);
   });
 });
